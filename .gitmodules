@@ -1,0 +1,3 @@
+[submodule "FileSystemWalker"]
+	path = FileSystemWalker
+	url = https://github.com/slessard/FileSystemWalker.git
