@@ -148,7 +148,7 @@ namespace com.pigdawg.Hasher
                     m_processingStarted = DateTime.UtcNow;
                     m_formatter.WriteHeader();
                     break;
-                case FileSystemWalkerDiagnostic.FileProcessed:
+                case FileSystemWalkerDiagnostic.FileProcessing:
                     m_counterFilesProcessed++;
                     break;
                 case FileSystemWalkerDiagnostic.FileReparsePoint:
@@ -160,7 +160,7 @@ namespace com.pigdawg.Hasher
                 case FileSystemWalkerDiagnostic.FileRead:
                     m_counterFilesRead++;
                     break;
-                case FileSystemWalkerDiagnostic.DirectoryProcessed:
+                case FileSystemWalkerDiagnostic.DirectoryProcessing:
                     m_counterDirectoriesProcessed++;
                     break;
                 case FileSystemWalkerDiagnostic.DirectoryReparsePoint:
