@@ -1,61 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
-    <ProjectGuid>{B404EC68-850B-422C-80AE-B9CB39A937F3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Hasher</RootNamespace>
-    <AssemblyName>Hasher</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <SynchReleaseVersion>false</SynchReleaseVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <TargetFramework>net48</TargetFramework>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
-    <Commandlineparameters>-all -md5 "/Users/slessard/bin/PC/Hasher.exe"</Commandlineparameters>
-<!--
-    <CustomCommands>
-      <CustomCommands>
-        <Command type="BeforeBuild" command="mono ../tools/PreprocessRC.exe /Output:${TargetDir}/AssemblyInfo.cs /Define:BuildNumber=$(cat $P4XROOT/VersionInfo/BuildNumber.txt) AssemblyInfo.cs" />
-      </CustomCommands>
-    </CustomCommands>
--->
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <DebugType>none</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Compile Remove="FileSystemWalker\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Main.cs" />
-    <Compile Include="HashWorker.cs" />
-    <Compile Include="FileData.cs" />
-    <Compile Include="DataTracker.cs" />
-    <Compile Include="DataFormatter.cs" />
-    <Compile Include="StatisticsManager.cs" />
-    <Compile Include="MD5Managed.cs" />
-    <Compile Include="Exceptions.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="FileSystemWalker\FileSystemWalker.cs" />
-    <Compile Include="FileSystemWalker\FileSystemWalkerExtensions.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
