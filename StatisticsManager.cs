@@ -13,8 +13,8 @@ namespace com.pigdawg.Hasher
     
     public class StatisticsManager
     {
-        private HashStatistics m_hashStatistics;
-        private DataFormatter m_formatter;
+        private readonly HashStatistics m_hashStatistics;
+        private readonly DataFormatter m_formatter;
 
         private DateTime m_processingStarted;
         private TimeSpan m_runningTime;

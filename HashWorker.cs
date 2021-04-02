@@ -13,7 +13,7 @@ namespace com.pigdawg.Hasher
 
     public class HashWorker
     {
-        HashAlgorithm m_hashAlgorithm = new SHA256Managed ();
+        private readonly HashAlgorithm m_hashAlgorithm = new SHA256Managed ();
 
         public HashWorker (HashAlgorithm hashAlgorithm)
         {
