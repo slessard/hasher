@@ -238,7 +238,7 @@ Hasher [-all | -dupes] [-md5 | -sha256] path [outputfile]
 
                 if (null == operatingContext.InputPath)
                 {
-                    Console.Error.WriteLine("Invalid argument: No onput file specified.");
+                    Console.Error.WriteLine("Invalid argument: No input path specified.");
                     Console.Error.WriteLine(MainClass.HelpMessage);
                     return 2;
                 }
