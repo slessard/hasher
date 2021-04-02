@@ -41,7 +41,7 @@ namespace Hasher
     /// These notices must be retained in any copies of any part of this
     /// documentation and/or software.
     /// </remarks>
-    class MD5Managed : HashAlgorithm
+    public class MD5Managed : HashAlgorithm
     {
         // Current context
         private readonly MD5_CTX _context = new MD5_CTX();

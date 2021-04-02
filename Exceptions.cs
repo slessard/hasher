@@ -5,7 +5,7 @@ namespace com.pigdawg.Hasher
     [Serializable]
     public class ArgumentParsingException : ArgumentException
     {
-        private int m_errorCode;
+        private readonly int m_errorCode;
         
         public ArgumentParsingException (string message, string paramName, int errorCode)
             : this(message, paramName, errorCode, null/*innerException*/)

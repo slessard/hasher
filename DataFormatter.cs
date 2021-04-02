@@ -34,17 +34,7 @@ namespace com.pigdawg.Hasher
                 Accessed,
             }
             
-            private Dictionary<Field, string> m_fields = new Dictionary<Field, string>();
-            
-            // Column headers
-            private const string Size = "Size";
-            private const string HashValue = "HashValue";
-            private const string FileName = "FileName";
-            private const string DirectoryName = "DirectoryName";
-            private const string Attributes = "Attributes";
-            private const string Created = "Created";
-            private const string Modified = "Modified";
-            private const string Accessed = "Accessed";
+            private readonly Dictionary<Field, string> m_fields = new Dictionary<Field, string>();
             
             public DataFields()
             {
@@ -107,7 +97,7 @@ namespace com.pigdawg.Hasher
             }
         }
 
-        private TextWriter m_writer;
+        private readonly TextWriter m_writer;
         private ulong m_writes;
 
         public DataFormatter ()

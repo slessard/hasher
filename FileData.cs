@@ -5,8 +5,8 @@ namespace com.pigdawg.Hasher
 {
     public class FileProperties
     {
-        private FileInfo m_fileInfo;
-        private byte[] m_hashValue;
+        private readonly FileInfo m_fileInfo;
+        private readonly byte[] m_hashValue;
 
         public FileProperties (FileInfo fileInfo, byte[] hashValue)
         {
@@ -33,14 +33,14 @@ namespace com.pigdawg.Hasher
 
     public class FileData
     {
-        long m_size;
-        byte[] m_hashValue;
-        string m_fileName;
-        string m_directoryName;
-        FileAttributes m_attributes;
-        DateTime m_created;
-        DateTime m_modified;
-        DateTime m_accessed;
+        private readonly long m_size;
+        private readonly byte[] m_hashValue;
+        private readonly string m_fileName;
+        private readonly string m_directoryName;
+        private readonly FileAttributes m_attributes;
+        private readonly DateTime m_created;
+        private readonly DateTime m_modified;
+        private readonly DateTime m_accessed;
             
         public FileData(long size, byte[] hashValue, string fileName,
                         string directoryName, FileAttributes attributes,

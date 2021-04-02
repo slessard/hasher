@@ -6,7 +6,7 @@ namespace com.pigdawg.Hasher
 {
     public class HashCalculatedEventArgs : EventArgs
     {
-        private FileData m_data;
+        private readonly FileData m_data;
         
         /// <summary>
         /// Create and populate an instance of HashCalculatedEventArgs
@@ -33,8 +33,8 @@ namespace com.pigdawg.Hasher
 
     public class HashDuplicateDetectedEventArgs : EventArgs
     {
-        private FileData m_duplicateData;
-        private FileData m_originalData;
+        private readonly FileData m_duplicateData;
+        private readonly FileData m_originalData;
         
         /// <summary>
         /// Create and populate an instance of HashDuplicateDetectedEventArgs
@@ -71,7 +71,7 @@ namespace com.pigdawg.Hasher
 
     public class DataTracker
     {
-        private Dictionary<string, FileData> m_hashes = new Dictionary<string, FileData>();
+        private readonly Dictionary<string, FileData> m_hashes = new Dictionary<string, FileData>();
         
         public event EventHandler<HashCalculatedEventArgs> HashCalculated;
         public event EventHandler<HashDuplicateDetectedEventArgs> HashDuplicateDetected;
